@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/submissions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <title>Pixify - Submissions</title>
+</head>
+
+<body>
+    <header>
+        <a href="/HTML/index.html">PIXIFY</a>
+        <nav>
+            <a href="/HTML/submissions.html">2023 Submissions</a>
+            <a href="/HTML/about.html">About</a>
+            <a id="dark-mode-button" onclick="darkMode()">Dark mode</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>2023 SUBMISSIONS</h1>
+            <div class="grid-container" id="grid-container">
+            </div>
+        </div>
+        <form name="submitForm" onsubmit="">
+            <h3>SUBMIT YOUR WORK</h3>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <input type="text" id="image1" name="image1" placeholder="Image URL one">
+            <input type="text" id="title" name="title" placeholder="Title of Your Entry">
+            <input type="text" id="image2" placeholder="Image URL two">
+            <input type="text" id="image3" placeholder="Image URL three">
+            <input type="text" id="image4" placeholder="Image URL four">
+            <input type="text" id="image5" placeholder="Image URL five">
+            <button onclick="submitImages()">SUBMIT</button>
+        </form>
+    </main>
+    <script src="/Scripts/script.js"></script>
+    <script>loadCards()</script>
+    <script src="/Scripts/darkMode.js"></script>
+</body>
+
+</html>

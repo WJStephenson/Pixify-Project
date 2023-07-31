@@ -1,0 +1,147 @@
+:root {
+    --header-height: 50px;
+    --bg-color: #2A3B49;
+    --text-color: #7BFFE9;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    align-items: center;
+    height: var(--header-height);
+    padding: 0 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav>a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    scale: 0.95;
+}
+
+header>a {
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+#dark-mode-button {
+    color: var(--text-color);
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+main {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+img {
+    max-width: 90vw;
+    max-height: 500px;
+    margin: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 1.25rem;
+    height: 2.5rem;
+    width: 110px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* dark mode */
+
+.dark-mode {
+    color: white;
+    background-color: var(--bg-color);
+    transition: all 0.5s ease;
+}
+
+.light-mode {
+    color: black;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+/* media queries */
+
+
+@media (max-width: 520px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0;
+        position: relative;
+        letter-spacing: 1px;
+    }
+
+    #dark-mode-button {
+        position: absolute;
+        top: 19px;
+        left: -1px;
+        margin: 0;
+    }
+
+    input {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,160 @@
+:root {
+    --header-height: 50px;
+    --bg-color: #2A3B49;
+    --text-color: #7BFFE9;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    align-items: center;
+    height: var(--header-height);
+    padding: 0 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav>a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    scale: 0.95;
+}
+
+header>a {
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+#dark-mode-button {
+    color: var(--text-color);
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+main {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.banner-text {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 1rem;
+}
+
+button {
+    width: 400px;
+    height: 110px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 55px;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease;
+}
+
+p {
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* dark mode */
+
+.dark-mode {
+    color: white;
+    background-color: var(--bg-color);
+    transition: all 0.5s ease;
+}
+
+.light-mode {
+    color: black;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+.submit-dark-mode {
+    border: 2px solid var(--text-color);
+}
+
+
+
+/* media queries */
+
+@media (max-width: 1000px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    button {
+        align-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    img {
+        max-width: 90vw;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 280px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0;
+        position: relative;
+        letter-spacing: 1px;
+    }
+
+    #dark-mode-button {
+        position: absolute;
+        top: 19px;
+        left: -1px;
+        margin: 0;
+    }
+}
